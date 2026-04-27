@@ -60,18 +60,18 @@ const TotalOrderForm = ({ onSubmit }: TotalOrderFormProps) => {
     const touched = formik.touched[field as keyof typeof formik.touched];
     const error = formik.errors[field as keyof typeof formik.errors];
     const base = 'w-full border rounded-md px-3 py-2.5 text-sm text-text-dark placeholder-text-light focus:outline-none focus:ring-1 transition-colors';
-    if (touched && error) return `${base} border-red-400 focus:ring-red-400`;
-    if (touched && !error) return `${base} border-green-400 focus:ring-green-400`;
-    return `${base} border-border focus:ring-sidebar-active`;
+    if (touched && error) return `${base} border-red-400 focus:ring-red-400 focus:border-red-400`;
+    if (touched && !error) return `${base} border-green-400 focus:ring-green-400 focus:border-green-400`;
+    return `${base} border-border focus:ring-sidebar-active focus:border-sidebar-active`;
   };
 
   const selectClass = (field: string) => {
     const touched = formik.touched[field as keyof typeof formik.touched];
     const error = formik.errors[field as keyof typeof formik.errors];
     const base = 'w-full border rounded-md px-3 py-2.5 text-sm bg-white appearance-none cursor-pointer focus:outline-none focus:ring-1 transition-colors';
-    if (touched && error) return `${base} border-red-400 focus:ring-red-400 text-text-light`;
-    if (touched && !error && formik.values[field as keyof typeof formik.values]) return `${base} border-green-400 focus:ring-green-400 text-text-dark`;
-    return `${base} border-border focus:ring-sidebar-active text-text-light`;
+    if (touched && error) return `${base} border-red-400 focus:ring-red-400 focus:border-red-400 text-text-light`;
+    if (touched && !error && formik.values[field as keyof typeof formik.values]) return `${base} border-green-400 focus:ring-green-400 focus:border-green-400 text-text-dark`;
+    return `${base} border-border focus:ring-sidebar-active focus:border-sidebar-active text-text-light`;
   };
 
   const errorMsg = (field: string) => {

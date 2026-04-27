@@ -62,9 +62,9 @@ const validationSchema = Yup.object({
     .max(250, 'Cannot exceed 250 characters'),
 });
 
-interface Props { onSubmit: () => void; }
+interface ApplicantDeliveryFormProps { onSubmit: () => void; }
 
-const ApplicantDeliveryForm = ({ onSubmit }: Props) => {
+const ApplicantDeliveryForm = ({ onSubmit }: ApplicantDeliveryFormProps) => {
   const [crValidated, setCrValidated] = useState(false);
   const [crValidating, setCrValidating] = useState(false);
 

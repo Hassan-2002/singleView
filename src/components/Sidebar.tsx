@@ -1,4 +1,4 @@
-import { AiOutlineHome, AiTwotoneAppstore } from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineAppstore } from 'react-icons/ai';
 import { FiSettings } from 'react-icons/fi';
 import { GoArrowSwitch } from "react-icons/go";
 
@@ -6,7 +6,7 @@ import { GoArrowSwitch } from "react-icons/go";
 const sidebarIcons = [
   { icon: AiOutlineHome, label: 'Home' },
   { icon: GoArrowSwitch, label: 'Requests' },
-  { icon: AiTwotoneAppstore, label: 'Services', active: true },
+  { icon: AiOutlineAppstore, label: 'Services', active: true },
   { icon: FiSettings, label: 'Settings' },
 ];
 
@@ -27,7 +27,7 @@ const Sidebar = () => {
             key={item.label}
             className={`group w-10 h-10 flex items-center justify-center rounded-lg transition-colors cursor-pointer
               ${item.active
-                ? 'bg-[#eef2ff]'
+                ? 'bg-gray-100'
                 : ''
               }`}
             aria-label={item.label}
