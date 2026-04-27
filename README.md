@@ -1,4 +1,4 @@
-# Letter of Guarantee - Banking Interface
+#Banking page interface assignment
 
 ## 🛠️ Tech Stack
 
