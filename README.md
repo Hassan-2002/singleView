@@ -1,74 +1,37 @@
-# React + TypeScript + Vite
+# Letter of Guarantee - Banking Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🛠️ Tech Stack
 
-Currently, two official plugins are available:
+- **React & TypeScript**: For a robust, type-safe frontend architecture.
+- **Vite**: Used as the build tool for optimized development performance.
+- **Tailwind CSS v4**: For modern, utility-first styling and a premium UI feel.
+- **Formik & Yup**: Utilized for comprehensive form state management and strict schema-based validation.
+- **React Icons**: For a consistent and professional iconography system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📝 Implementation Notes
 
-## React Compiler
+- **Enhanced Form Sections**: While following the core requirements, I took the liberty of adding relevant fields and logic to the form sections (e.g., Bank Details, Beneficiary Info, and Order Summary) to ensure the interface reflects a realistic and functional banking workflow.
+- **Validation**: Implemented real-time validation for Saudi-specific data like CR Numbers, phone formats, and postal codes to ensure data integrity.
+- **Interactivity**: Added custom accordion logic and smooth transitions between sections to improve the user experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 How to Run
 
-## Expanding the ESLint configuration
+To see the application in action, please follow these simple steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Install Dependencies**:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+   ```bash
+   npm install
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. **Start the Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+I request you to run the project locally to experience the interactive validation flow and responsive design firsthand.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📸 Screenshots
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-"# singleView" 
+![Dashboard Interface](./src/assets/Screenshot%20(407).png)
+![Form Validation State](./src/assets/Screenshot%20(408).png)
